@@ -1,33 +1,99 @@
 /* import google font style 'Krona One' */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
 /* use CSS reset for margin,padding, & set global fonts style*/
-
+* {
+  margin: 0;
+  padding: 0;
+}
 
 /*  Style the h1 tag */
-
+h1 {
+  color: #000;
+  font-size: 52px;
+  font-family: 'Krona One', sans-serif;
+  text-align: center;
+}
 
 /* Style the span in the h1 tag */
+h1 span.green__x {
+  color: limegreen;
+}
 
-
-/* Stlye the h2 tag*/
-
-
-/* Style only the images inside my product gallery */
-
-
-/* Style the images inside my product gallery only on hover*/
-
+/* Style the h2 tag*/
+h2 {
+  color: #333;
+  font-size: 25px;
+  font-family: 'Krona One', sans-serif;
+  text-align: center;
+  margin: 20px 0;
+}
 
 /* Style my product gallery */
+.my__products__gallery {
+  display: flex;
+  flex-direction: column;
+}
 
+/* Style only the images inside my product gallery */
+.my__products__gallery img {
+  width: 135px;
+  height: 76px;
+  object-fit: cover;
+  margin: 10px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  position: relative;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+/* Style the images inside my product gallery only on hover*/
+.my__products__gallery img:hover {
+  z-index: 2;
+  opacity: 1;
+}
 
 /* Style my products */
-
+.my__products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Style the image inside image container */
+.image__container img {
+  width: 690px;
+  height: 388px;
+  object-fit: cover;
+  margin: 20px;
+  border: 2px solid #ccc;
+  transition: transform 0.8s;
+  z-index: 2;
+  box-shadow: 0 0 0 transparent;
+}
 
+.my__products__gallery img,
+.image__container img {
+  position: relative;
+  z-index: 1;
+  transition: all 0.8s;
+}
 
 /* Style the images inside my image container only on hover*/
+.image__container img:hover {
+  transform: scale(1.35);
+  box-shadow: 0 40px 20px rgba(0, 0, 0, 0.19), 0 12px 12px rgba(0, 0, 0, 0.23);
+}
 
+.image__container img:hover,
+.image__container img:active {
+  z-index: 3;
+}
 
 /* Style image container */
+.image__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
